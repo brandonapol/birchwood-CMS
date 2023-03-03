@@ -13,7 +13,7 @@
       <textarea v-model="content"></textarea>
     </label>
     <button @click.prevent="handleSubmit">Submit</button>
-    <button @click="getData!">Get data</button>
+    <button @click.prevent="getData">Get data</button>
   </form>
 </template>
 
@@ -24,7 +24,7 @@ const title = ref('');
 const author = ref('');
 const content = ref('');
 
-const getData: void = console.log(calls.get)
+const getData: () => void = async () => console.log(await calls.get())
 
 function handleSubmit() {
   const formData = {
@@ -33,7 +33,7 @@ function handleSubmit() {
     content: content.value,
   };
   console.log(formData); 
-  // TODO: send to server
+  calls.post(formData);
   }
 
 </script>
