@@ -14,11 +14,15 @@
     </label>
     <button @click.prevent="handleSubmit">Submit</button>
     <button @click.prevent="getData">Get data</button>
+    <Suspense>
+      <DataGrid />
+    </Suspense>
   </form>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import DataGrid from './components/DataGrid.vue';
 import { calls } from './server_calls/calls'
 const title = ref('');
 const author = ref('');
