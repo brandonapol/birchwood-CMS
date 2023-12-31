@@ -1,6 +1,6 @@
 export const calls = {
     get: async () => {
-        const response = await fetch(`http://localhost:8000/api/blog`,
+        const response = await fetch(`${import.meta.env.VITE_SERVER_API_URL}/api/blog`,
         {
             method: 'GET'
         });
@@ -13,7 +13,7 @@ export const calls = {
     },
 
     post: async(data: any = {}) => {
-        const response = await fetch('http://localhost:8000/api/blog',
+        const response = await fetch(`${import.meta.env.VITE_SERVER_API_URL}/api/blog`,
         {
             method: 'POST',
             headers: {
@@ -30,7 +30,7 @@ export const calls = {
     },
 
     update: async (id:string, data: any = {}) => {
-        const response = await fetch(`http://localhost:8000/api/blog/${id}`,
+        const response = await fetch(`${import.meta.env.VITE_SERVER_API_URL}/api/blog/${id}`,
         {
             method: "POST",
             headers: {
@@ -47,7 +47,7 @@ export const calls = {
         return await response.json()
     },
     delete: async (id:string) => {
-        const response = await fetch(`http://localhost:8000/api/blog/${id}`,
+        const response = await fetch(`${import.meta.env.VITE_SERVER_API_URL}/api/blog/${id}`,
         {
             method: "DELETE",
             headers: {
