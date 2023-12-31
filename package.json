@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "test": "vite preview",
-    "prepare": "husky install"
+    "test": "vite preview"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^2.0.4",
