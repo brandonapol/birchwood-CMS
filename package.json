@@ -7,14 +7,16 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "test": "vite preview"
+    "test": "vite preview",
+    "serve": "serve -s dist -l 5173"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^2.0.4",
     "@auth0/auth0-vue": "^2.0.2",
     "ag-grid-vue3": "^29.1.0",
     "vue": "^3.2.41",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",

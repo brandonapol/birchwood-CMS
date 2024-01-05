@@ -11,7 +11,7 @@ const router = createRouter({
             meta: {
                 title: 'Birchwood CMS'
             },
-            beforeEnter: authGuard
+            // beforeEnter: authGuard
         }
     ]
 })
